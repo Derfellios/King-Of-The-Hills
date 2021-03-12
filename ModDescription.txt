@@ -1,0 +1,1 @@
+This mod adds one new rule: If you capture all hills you win. It only works with manual distribution. The number and size of hills can be altered.
