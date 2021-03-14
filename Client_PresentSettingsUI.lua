@@ -1,4 +1,5 @@
  function Client_PresentSettingsUI(rootParent)
+	if game.Settings.AutomaticTerritoryDistribution then return end;
 	local vert = UI.CreateVerticalLayoutGroup(rootParent);
     UI.CreateLabel(vert).SetText('Number of hills in the game: ' .. Mod.Settings.NumberOfHills);
 	UI.CreateLabel(vert).SetText('Number of armies on each hill: ' .. Mod.Settings.SizeOfHills);

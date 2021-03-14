@@ -21,7 +21,7 @@ end
 end
 
 function Client_PresentMenuUI(rootParent, setMaxSize, setScrollable, game, close)
- 
+	if game.Settings.AutomaticTerritoryDistribution then return end;
 	Game = game; --make it globally accessible
 	
 

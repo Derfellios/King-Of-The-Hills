@@ -1,5 +1,6 @@
 
 function Server_AdvanceTurn_End(game, addNewOrder)
+	if game.Settings.AutomaticTerritoryDistribution then return end;
 	local Hills  = Mod.PublicGameData.Hills;
 	local Owners = {}
 	for _, Hill in pairs(Hills) do;
