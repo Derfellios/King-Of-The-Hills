@@ -40,9 +40,9 @@ function Client_PresentMenuUI(rootParent, setMaxSize, setScrollable, game, close
 		local PublicGameData = Mod.PublicGameData;
 		Hills = PublicGameData.Hills;
 		for _, Hill in pairs(Hills) do
-			UI.CreateLabel(vert).SetText("-" .. game.Map.Territories[Hill].Name);
+			UI.CreateLabel(vert).SetText("- " .. game.Map.Territories[Hill].Name);
 		end
-		UI.CreateLabel(vert).SetText('Capture all of them to win!');
+		UI.CreateLabel(vert).SetText('Capture all of them and hold them to the end of the turn to win!');
 	end
 end
 
