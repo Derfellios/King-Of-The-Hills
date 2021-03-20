@@ -1,32 +1,5 @@
- function map(array, func, j)
-	local new_array = {}
-	local i = 1;
-	for _,v in pairs(array) do
-		new_array[i] = func(v, j);
-		i = i + 1;
-	end
-	return new_array
-end
-
- function filter(array, func)
-	local new_array = {}
-	local i = 1;
-	for _,v in pairs(array) do
-		if (func(v)) then
-			new_array[i] = v;
-			i = i + 1;
-		end
-	end
-	return new_array
-end
-
-function Client_PresentMenuUI(rootParent, setMaxSize, setScrollable, game, close)
-	if game.Settings.AutomaticTerritoryDistribution then return end;
-	Game = game; --make it globally accessible
-	
-
-	
-    if Game.Us ~= nil then
+function Client_PresentMenuUI(rootParent, setMaxSize, setScrollable, game, close)	
+    if game.Us ~= nil then
 	
 		NumberOfHills = 2;
 		if Mod.Settings.NumberOfHills ~= nil then
@@ -42,7 +15,7 @@ function Client_PresentMenuUI(rootParent, setMaxSize, setScrollable, game, close
 		for _, Hill in pairs(Hills) do
 			UI.CreateLabel(vert).SetText("- " .. game.Map.Territories[Hill].Name);
 		end
-		UI.CreateLabel(vert).SetText('Capture all of them and hold them until the end of the turn to win!');
+		UI.CreateLabel(vert).SetText('Hold all hills at the end of a turn to win!');
 	end
 end
 

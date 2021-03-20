@@ -1,1 +1,2 @@
-This mod adds one new rule: If you capture all hills and hold them until the end of a turn, you win. The mod requires manual distribution. The number and size of hills can be altered.
+This mod adds one new rule: If you hold all hills at the end of a turn, you win. The number and size of hills can be altered.
+In team games, the game ends when a team captures all hills. Which players do this does not matter.

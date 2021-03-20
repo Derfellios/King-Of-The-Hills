@@ -1,4 +1,5 @@
-function Server_StartDistribution(game, standing)
+function Server_StartGame(game, standing)
+	if not game.Settings.AutomaticTerritoryDistribution then return end;
 	NumberOfHills = 2;
 	if Mod.Settings.NumberOfHills ~= nil then
 		NumberOfHills = Mod.Settings.NumberOfHills;

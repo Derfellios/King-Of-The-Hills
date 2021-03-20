@@ -1,5 +1,4 @@
 function Server_GameCustomMessage(game, playerID, payload, setReturnTable)
-	if game.Settings.AutomaticTerritoryDistribution then return end;
 	if payload.Message == "InitialPopupDisplayed" then
 		local playerGameData = Mod.PlayerGameData;
 		if (playerGameData[playerID] == nil) then
