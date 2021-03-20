@@ -1,4 +1,9 @@
 function Server_AdvanceTurn_End(game, addNewOrder)
+	
+	if Mod.Settings.NumberOfHills < 1 then
+		return
+	end
+	
 	local Hills  = Mod.PublicGameData.Hills;
 	
 	NoNeutrals = true;

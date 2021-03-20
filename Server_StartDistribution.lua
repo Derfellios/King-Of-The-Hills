@@ -1,13 +1,22 @@
 function Server_StartDistribution(game, standing)
+
 	NumberOfHills = 2;
 	if Mod.Settings.NumberOfHills ~= nil then
 		NumberOfHills = Mod.Settings.NumberOfHills;
+	end
+	
+	if NumberOfHills < 0 then 
+		NumberOfHills = 0; 
 	end
 	
 	SizeOfHills = 10
 	local BannedPicks = Mod.PublicGameData;
 	if Mod.Settings.SizeOfHills ~= nil then
 		SizeOfHills = Mod.Settings.SizeOfHills;
+	end
+	
+	if NumberOfHills < 0 then 
+		NumberOfHills = 0;
 	end
 	
 	local PublicGameData = Mod.PublicGameData;
