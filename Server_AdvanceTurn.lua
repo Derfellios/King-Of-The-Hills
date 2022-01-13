@@ -1,9 +1,4 @@
 function Server_AdvanceTurn_End(game, addNewOrder)
-	
-	if Mod.Settings.NumberOfHills < 1 then
-		return
-	end
-	
 	local Hills  = Mod.PublicGameData.Hills;
 	
 	NoNeutrals = true;
@@ -47,14 +42,14 @@ function Server_AdvanceTurn_End(game, addNewOrder)
 		if AllSame then
 			ToLose = {}
 			if IsTeamGame then
-				TeamID = game.ServerGame.Game.Players[game.ServerGame.LatestTurnStanding.Territories[Hills[1]].OwnerPlayerID].Team;
+				TeamID = game.ServerGame.Game.Players[game.ServerGame.LatestTurnStanding.Territories[Hills[1] ].OwnerPlayerID].Team;
 				for TerrID, Terr in pairs(game.ServerGame.LatestTurnStanding.Territories) do
 					if not Terr.IsNeutral and TeamID ~= game.ServerGame.Game.Players[Terr.OwnerPlayerID].Team then
 						table.insert(ToLose, TerrID)
 					end
 				end
 			else
-				PlayerID = game.ServerGame.LatestTurnStanding.Territories[Hills[1]].OwnerPlayerID;
+				PlayerID = game.ServerGame.LatestTurnStanding.Territories[Hills[1] ].OwnerPlayerID;
 				for TerrID, Terr in pairs(game.ServerGame.LatestTurnStanding.Territories) do
 					if not Terr.IsNeutral and PlayerID ~= Terr.OwnerPlayerID then
 						table.insert(ToLose, TerrID)

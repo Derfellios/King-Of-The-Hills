@@ -1,16 +1,9 @@
  function Client_PresentSettingsUI(rootParent)
 	local vert = UI.CreateVerticalLayoutGroup(rootParent);
-	UI.CreateLabel(vert).SetText("The hills can found by clicking 'Game' on the bottom left and then 'Mod: King Of The Hill'");
+	UI.CreateLabel(vert).SetText("The hills are indicated with Money Caches and can also found by clicking 'Game' on the bottom left and then 'Mod: King Of The Hill'");
 	
-	NumberOfHills = Mod.Settings.NumberOfHills;
-	if NumberOfHills < 0 then
-		NumberOfHills = 0
-	end
-	
-	SizeOfHills = Mod.Settings.SizeOfHills;
-	if SizeOfHills < 0 then
-		SizeOfHills = 0
-	end
+	local NumberOfHills = Mod.Settings.NumberOfHills;
+	local SizeOfHills = Mod.Settings.SizeOfHills;
 	
     UI.CreateLabel(vert).SetText('Number of hills in the game: ' .. NumberOfHills);
 	UI.CreateLabel(vert).SetText('Number of armies on each hill: ' .. SizeOfHills);
