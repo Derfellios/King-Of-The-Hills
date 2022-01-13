@@ -7,7 +7,7 @@ function Client_GameRefresh(game)
 		for _, Hill in pairs(Hills) do
 			message = message .. " - " .. game.Map.Territories[Hill].Name .. "\n";
 		end
-		message2 = "and marked with Money Caches "
+		message2 = "and marked with Mines "
 		if game.Us == nil then
 			message3 = ""
 		else
